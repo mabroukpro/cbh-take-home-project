@@ -26,7 +26,7 @@ describe("deterministicPartitionKey", () => {
 
   it("Returns a valid partitionKey if provided and  it's length is bigger than 256", () => {
     const partitionKey =
-      "c1802e6b9670927ebfddb7f67b3824642237361f07db35526c42c555ffd2dbe74156c366e1550ef8c0508a6cc796409a7194a59bba4d300a6182b483d315a8622";
+      "c1802e6b9670927ebfddb7f67b3824642237361f07db35526c42c555ffd2dbe74156c366e1550ef8c0508a6cc796409a7194a59bba4d300a6182b483d315a8622c1802e6b9670927ebfddb7f67b3824642237361f07db35526c42c555ffd2dbe74156c366e1550ef8c0508a6cc796409a7194a59bba4d300a6182b483d315a8622";//larger than 256
     const data = { partitionKey: partitionKey };
     const trivialKey = deterministicPartitionKey(data);
     expect(trivialKey.length).toBeLessThanOrEqual(256);
